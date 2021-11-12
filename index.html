@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+    <head>
+        <title>Show</title>
+        <style>
+            #image{
+                display: none;
+            }
+            #text{
+                display: none;
+            }
+        </style>
+    </head>
+    <body style="text-align: center; background-color: black;">
+        <div>
+            <img src="img.jpg" id="image"/>
+        </div> 
+        <h1 style="color:darkred;">Cilck to show some notes and try decoding!</h1>
+        <button type="button" onclick="Showme1()">GO</button>
+        <div id="text">
+            <h3 style="color:darkred;">Lorem ipsum dolor sit amet, 
+                consectetur adipiscing elit. In lectus lorem, tempus 
+                eget augue sed, maximus cursus odio. Etiam vehicula 
+                arcu quis vulputate semper. Sed nisi tortor, placerat 
+                interdum rutrum sit amet, aliquet id tellus. Interdum 
+                et malesuada fames ac ante ipsum primis in faucibus. 
+                Curabitur rutrum tortor felis, nec ultricies lacus mollis ac. 
+                Morbi vitae dui ac augue porta cursus. Vivamus sit amet dui 
+                id ligula scelerisque vestibulum nec et enim. Nulla quis augue 
+                elit. Integer non elementum orci. Nullam consectetur vel est 
+                in gravida. Phasellus rutrum pellentesque sem, quis gravida magna faucibus et.
+            </h3>
+        </div>
+        <script>
+            function Showme1() {
+                document.getElementById('text').style.display = "block";
+                var music = new Audio('music2.mp3');
+                music.play();
+                setTimeout(function(){
+                    var music = new Audio('music.mp3');
+                    music.play();
+                    setTimeout(function(){
+                        document.getElementById('image').style.display = "block";
+                    }, 500);
+                }, 9000);
+            }
+        </script>
+    </body>
+</html>
